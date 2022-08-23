@@ -11,7 +11,10 @@ export const Button = styled.button`
     background-color: ${({ bg }) => bg || '#fff'};
     color: ${({ color }) => color || '#333'};
     &:hover{
-        opacity:0.9;
+        opacity: 0.9;
         transform: scale(0.98);
+    }
+    @media(max-width:${({ theme }) => theme.mobile}){
+        margin-bottom: ${({ bg }) => bg ? '30px' : 0}
     }
 `
